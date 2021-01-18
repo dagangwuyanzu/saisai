@@ -20,3 +20,33 @@ git 本地操作
 ## git 常用辅助命令
     git status  查看仓库当前状态
     git log     显示提交日志  记录  添加 -m  "这里面添加备注"上传的文件做的什么功能就怎么备注
+
+### 总结一下
+    git add  添加文件到暂存区  加 . 就是添加所有
+        > 前提是文件有修改
+    git commit 提交到版本库 
+        > 前提是暂存区的文件有修改了
+
+
+### 一般工作中 上传的都是公司自己的电脑服务器 
+以上都为本地操作  下面我想要上传 共享到远程服务器
+
+远程仓库 （为了进行代码的共享 同步）公共服务器
+
+
+### 关联是本地仓库关联远程仓库  所以我们的git命令页面要在需要关联的本地仓库打开才行
+
+### http  关联远程仓库
+git remote add origin https://github.com/aaron-xie/laoxietest.git
+
+git remote add  加名字（随便取）再加远程仓库的地址
+
+ git remote -v 查看
+### ssh 关联远程仓库
+
+利用命令  ssh-keygen 会生成一个 .ssh的文件 在c盘麦本本 打开文件里面的 id_rsa.pub文件 里面的东西就公钥 复制 然后到github里面 点击头像出来下拉菜单倒数第二个 settings 再点击左边一栏中的 SSH and GPG keys 添加到服务器
+
+# 命令行通过 git remote add origin 加地址这个地址是github里面的
+
+
+详细可以观看 git视频 4
